@@ -1,0 +1,26 @@
+{
+  "name": "docker-azurite",
+  "version": "2.7.0",
+  "description": "Docker image for Azurite 2.7+",
+  "author": "Touchify (dev@touchify.co)",
+  "license": "MIT",
+  "main": "index.js",
+  "private": true,
+  "repository": {
+    "url": "https://github.com/touchifyapp/docker-azurite.git"
+  },
+  "scripts": {
+    "build": "cross-var \"docker build -t touchifyapp/azurite -t touchifyapp/azurite:latest -t touchifyapp/azurite:$npm_package_version .\"",
+    "push": "cross-var \"docker push touchifyapp/azurite:latest && docker push touchifyapp/azurite:$npm_package_version\"",
+    "blob": "azurite-blob -l /data",
+    "table": "azurite-table -l /data",
+    "queue": "azurite-queue -l /data",
+    "start": "azurite -l /data"
+  },
+  "dependencies": {
+    "azurite": "2.7.0"
+  },
+  "devDependencies": {
+    "cross-var": "^1.1.0"
+  }
+}
