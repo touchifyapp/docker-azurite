@@ -1,6 +1,6 @@
 # Supported tags and respective Dockerfile links
 
-*  [`2.7.0`, `2.7`, `2`, `latest` (Dockerfile)](https://github.com/touchifyapp/docker-azurite/blob/master/Dockerfile)
+*  [`2.7.1`, `2.7`, `2`, `latest` (Dockerfile)](https://github.com/touchifyapp/docker-azurite/blob/master/Dockerfile)
 
 This image is updated via [pull requests to the `touchifyapp/docker-azurite` GitHub repo](https://github.com/touchifyapp/docker-azurite/pulls).
 
@@ -27,7 +27,7 @@ docker run -dt \
   -p 10001:10001 \
   -p 10002:10002 \
   -v $(PWD):/data \
-  touchifyapp/azurite
+  touchify/azurite
 ```
 
 ### Start only a specific server
@@ -36,13 +36,13 @@ You can run only Blob, Queue or Table Storage server by specifying a custom comm
 
 ```bash
 # Run only Blob server
-docker run -dt --name azurite -p 10000:10000 -v $(PWD):/data touchifyapp/azurite npm run blob
+docker run -dt --name azurite -p 10000:10000 -v $(PWD):/data touchify/azurite npm run blob
 
 # Run only Queue server
-docker run -dt --name azurite -p 10001:10001 -v $(PWD):/data touchifyapp/azurite npm run queue
+docker run -dt --name azurite -p 10001:10001 -v $(PWD):/data touchify/azurite npm run queue
 
 # Run only Table server
-docker run -dt --name azurite -p 10002:10002 -v $(PWD):/data touchifyapp/azurite npm run table
+docker run -dt --name azurite -p 10002:10002 -v $(PWD):/data touchify/azurite npm run table
 ```
 
 ### Connection strings

@@ -10,8 +10,8 @@
     "url": "https://github.com/touchifyapp/docker-azurite.git"
   },
   "scripts": {
-    "build": "cross-var \"docker build -t touchifyapp/azurite -t touchifyapp/azurite:latest -t touchifyapp/azurite:$npm_package_version .\"",
-    "push": "cross-var \"docker push touchifyapp/azurite:latest && docker push touchifyapp/azurite:$npm_package_version\"",
+    "build": "cross-var \"docker build -t touchify/azurite -t touchify/azurite:latest -t touchify/azurite:$npm_package_version .\"",
+    "push": "cross-var \"docker push touchify/azurite:latest && docker push touchify/azurite:$npm_package_version\"",
     "blob": "azurite-blob -l /data",
     "table": "azurite-table -l /data",
     "queue": "azurite-queue -l /data",
