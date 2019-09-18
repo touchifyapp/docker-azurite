@@ -1,6 +1,6 @@
 {
   "name": "docker-azurite",
-  "version": "2.7.0",
+  "version": "2.7.1",
   "description": "Docker image for Azurite 2.7+",
   "author": "Touchify (dev@touchify.co)",
   "license": "MIT",
@@ -18,7 +18,7 @@
     "start": "azurite -l /data"
   },
   "dependencies": {
-    "azurite": "2.7.0"
+    "azurite": "2.7.1"
   },
   "devDependencies": {
     "cross-var": "^1.1.0"
